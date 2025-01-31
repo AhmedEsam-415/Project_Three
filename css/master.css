@@ -1038,8 +1038,7 @@ ul {
 .pricing .box:hover::after {
   width: 100%;
 }
-.pricing .box {
-}
+
 @media (min-width: 1200px) {
   .pricing .box.popular {
     top: -20px;
@@ -1073,12 +1072,51 @@ ul {
 }
 .pricing .box img {
   width: 80px;
+  margin-bottom: 30px;
 }
 .pricing .box .pei {
+  margin-bottom: 20px;
 }
-.pricing .box .pei span:fi {
+.pricing .box .pei span:first-child {
+  display: block;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--mainColor);
 }
-.pricing .box .pei span {
+
+.pricing .box .pei span:last-child {
+  color: #777;
+}
+.pricing .box ul {
+  text-align: left;
+}
+.pricing .box ul li {
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+.pricing .box ul li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  font-weight: 900;
+  margin-right: 10px;
+  color: var(--mainColor);
+}
+.pricing .box a {
+  display: block;
+  width: fit-content;
+  padding: 15px 20px;
+  margin: 30px auto 40px;
+  border-radius: 6px;
+  font-weight: bold;
+  border: 2px solid var(--mainColor);
+  color: var(--mainColor);
+  transition: var(--mainTransition);
+}
+.pricing .box a:hover {
+  background-color: var(--mainColorAlt);
+  border-color: var(--mainColorAlt);
+  color: white;
 }
 /* Start Animation */
 @keyframes up-down {
