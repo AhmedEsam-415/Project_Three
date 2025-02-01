@@ -1118,6 +1118,136 @@ ul {
   border-color: var(--mainColorAlt);
   color: white;
 }
+
+.video {
+  padding: var(--mainPadding) 0;
+}
+.video .holder {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #ddd;
+  background-color: var(--sectionColor);
+}
+@media (max-width: 991px) {
+  .video .holder {
+    flex-direction: column;
+  }
+}
+.video .holder .list {
+  min-width: 300px;
+  background-color: white;
+}
+.video .holder .list .name {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+.video .holder .list ul li {
+  padding: 15px;
+  border-top: 1px solid var(--sectionColor);
+  cursor: pointer;
+  transition: var(--mainTransition);
+}
+.video .holder .list ul li:hover {
+  background-color: #fafafa;
+  color: var(--mainColor);
+}
+.video .holder .list ul li span {
+  display: block;
+  color: #777;
+  margin-top: 10px;
+}
+.video .holder .preview {
+  background-color: #e2e2e2;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.video .holder .preview img {
+  max-width: 100%;
+}
+.video .holder .preview .info {
+  padding: 20px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.stats {
+  padding: var(--mainPadding) 0;
+  position: relative;
+  background-image: url(../imgs/stats.jpg);
+  background-size: cover;
+  min-height: 300px;
+}
+.stats::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255 255 255 / 95%);
+}
+.stats h2 {
+  width: fit-content;
+  margin: 0 auto 50px;
+  font-weight: bold;
+  font-size: 40px;
+  position: relative;
+}
+.stats .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.stats .box {
+  background-color: white;
+  position: relative;
+  padding: 30px 15px;
+  text-align: center;
+  opacity: 0.8;
+  transform: var(--mainTransition);
+}
+.stats .box::before,
+.stats .box::after {
+  content: "";
+  position: absolute;
+  background-color: var(--mainColor);
+  height: 0;
+  width: 2px;
+  transition: 1s;
+}
+.stats .box::before {
+  top: 0;
+  right: 0;
+}
+.stats .box::after {
+  left: 0;
+  bottom: 0;
+}
+.stats .box:hover::before,
+.stats .box:hover::after {
+  height: 100%;
+}
+.stats .box:hover {
+  opacity: 1;
+}
+.stats .box .number {
+  display: block;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.stats .box .text {
+  color: var(--mainColor);
+  font-style: italic;
+  font-weight: bold;
+}
+
 /* Start Animation */
 @keyframes up-down {
   0%,
